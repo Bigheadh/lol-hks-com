@@ -1,0 +1,149 @@
+{
+  "version": "DISABLED-prototype-2026-09-05",
+  "notice": "人工编写的机制搭配示例，尚未按当前海克斯大乱斗版本逐项验证，也不是胜率榜。加载界面尚未展示本局海克斯选项；获得强化后需重新判断打法。",
+  "sources": [
+    "https://developer.riotgames.com/docs/lol#data-dragon",
+    "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-8-notes/",
+    "https://arammayhem.com/augments/"
+  ],
+  "profiles": {
+    "marksman": {
+      "name": "暴击射手",
+      "items": ["3006", "6676", "3031", "3085", "3036", "3072"],
+      "priority": "优先普攻收益、攻击距离、攻速与暴击；生存困难时考虑续航或防护。",
+      "augments": [
+        {"name": "Deft（攻速方向）", "reason": "适合以持续普攻作为主要输出的打法。"},
+        {"name": "Scopier Weapons（射程方向）", "reason": "更长的攻击距离有利于安全输出。"},
+        {"name": "Soul Siphon（暴击续航方向）", "reason": "可作为暴击路线的续航候选。"}
+      ],
+      "tips": ["面对高护甲前排时考虑提前穿甲装备。", "敌方突进强时保留防御装备位；鞋子可按伤害和控制类型调整。", "攻击特效型英雄可切换为攻速特效路线。"]
+    },
+    "onhit": {
+      "name": "攻速特效",
+      "items": ["3006", "3153", "3124", "3085", "3091", "3302"],
+      "priority": "优先普攻触发、攻击速度与射程；根据海克斯对攻击特效的限制判断收益。",
+      "augments": [
+        {"name": "Deft（攻速方向）", "reason": "增加普攻与攻击特效触发频率。"},
+        {"name": "Scopier Weapons（射程方向）", "reason": "改善持续输出的站位空间。"}
+      ],
+      "tips": ["攻击速度达到上限后，重新评估继续堆攻速的收益。", "面对高魔法伤害可考虑智慧末刃；暴击和特效并非总能兼容。"]
+    },
+    "mage": {
+      "name": "法术爆发",
+      "items": ["3020", "6655", "4645", "3089", "3135", "3157"],
+      "priority": "优先技能增伤、法术强度、技能急速与技能暴击。",
+      "augments": [
+        {"name": "珠光护手（Jeweled Gauntlet）", "reason": "技能暴击方向，适合能稳定命中伤害技能的打法。"},
+        {"name": "Phenomenal Evil（成长法强方向）", "reason": "频繁命中英雄的技能更利于积累收益。"},
+        {"name": "Eureka（急速方向）", "reason": "法强路线可关注技能急速联动。"}
+      ],
+      "tips": ["敌方堆魔抗时提前考虑虚空之杖。", "敌方刺客威胁大时可提前中娅沙漏。", "持续伤害英雄可切换持续灼烧路线。"]
+    },
+    "burn": {
+      "name": "持续灼烧",
+      "items": ["3020", "6653", "3116", "4633", "3135", "3157"],
+      "priority": "优先持续技能伤害、灼烧、技能急速与生命法强联动。",
+      "augments": [
+        {"name": "Infernal Conduit（持续伤害方向）", "reason": "多段或持续命中的技能可关注这一候选。"},
+        {"name": "Phenomenal Evil（成长法强方向）", "reason": "持续命中英雄时有成长空间。"},
+        {"name": "珠光护手（Jeweled Gauntlet）", "reason": "出现时检查其对自身技能与持续伤害的适用范围。"}
+      ],
+      "tips": ["冰杖更适合技能能有效施加减速的英雄；并非所有法师都需要。", "队伍需要重伤时考虑替换一件装备；不必多人重复投入。"]
+    },
+    "tank": {
+      "name": "坦克前排",
+      "items": ["3047", "3068", "6665", "3065", "3075", "3143"],
+      "priority": "优先生命、双抗、持续回复与控制收益；根据敌方实际伤害构成调整防具。",
+      "augments": [
+        {"name": "歌利亚巨人（Goliath）", "reason": "关注生命和体型相关收益是否适合当前打法。"},
+        {"name": "Celestial Body（生命方向）", "reason": "承担伤害与控制的路线可评估这类属性交换。"},
+        {"name": "Heavy Hitter（生命普攻方向）", "reason": "高生命且能持续普攻时考虑。"}
+      ],
+      "tips": ["敌方法术伤害多时以魔抗装备替换护甲件。", "敌方暴击伤害高时考虑兰顿之兆；有重伤需求再考虑荆棘之甲。", "心之钢需要近身叠层条件，不作为所有坦克的固定首件。"]
+    },
+    "fighter": {
+      "name": "近战战士",
+      "items": ["3111", "3071", "6610", "3053", "6333", "3065"],
+      "priority": "优先持续作战、技能急速、回复与生命攻击联动。",
+      "augments": [
+        {"name": "Mystic Punch（普攻技能联动方向）", "reason": "适合技能与普攻交替的战斗节奏。"},
+        {"name": "Goredrink（续航方向）", "reason": "需要贴身持续输出时考虑。"},
+        {"name": "歌利亚巨人（Goliath）", "reason": "需要承受集火时评估生存收益。"}
+      ],
+      "tips": ["需要能摸到后排才有输出，生存和进场能力应一起考虑。", "敌方物理伤害少时，死亡之舞可换成适合该英雄的魔抗装备。"]
+    },
+    "assassin": {
+      "name": "物理刺客",
+      "items": ["3158", "3142", "6692", "6694", "3814", "6333"],
+      "priority": "优先爆发、穿透、技能急速与进出场能力。法术刺客请切换法术路线。",
+      "augments": [
+        {"name": "The Brutalizer（物理属性方向）", "reason": "关注攻击力、穿透和技能急速的组合收益。"},
+        {"name": "Goredrink（续航方向）", "reason": "适合需要延长作战时间的局面。"}
+      ],
+      "tips": ["敌方前排较多时考虑战士路线，避免只堆固定穿透。", "夜之锋刃更适合需要挡住关键技能才能进场的局面。"]
+    },
+    "support": {
+      "name": "治疗护盾辅助",
+      "items": ["3158", "6617", "3504", "3107", "3109", "3190"],
+      "priority": "优先治疗护盾增益、技能急速与团队保护；该路线用于软辅，开团辅助可切换坦克。",
+      "augments": [
+        {"name": "Sonic Boom（治疗护盾联动方向）", "reason": "拥有稳定治疗或护盾技能时可关注。"},
+        {"name": "First-Aid Kit（治疗护盾方向）", "reason": "评估对自己的治疗、护盾技能是否有效。"}
+      ],
+      "tips": ["队友普攻收益低时，炽热香炉可替换为其他保护或急速装备。", "辅助也需要生存，无法存活时优先调整防具和站位。"]
+    }
+  },
+  "champions": {
+    "Jinx": {"profile": "marksman", "note": "利用射程和启动后的持续输出；先保证能安全普攻。"},
+    "Ashe": {"profile": "marksman"},
+    "Caitlyn": {"profile": "marksman"},
+    "Jhin": {"profile": "marksman", "items": ["3009", "6676", "3031", "3094", "3036", "3072"], "note": "烬有特殊攻速机制，攻速海克斯需检查实际收益，不照搬通用射手优先级。"},
+    "KogMaw": {"profile": "onhit"},
+    "Vayne": {"profile": "onhit", "items": ["3006", "3153", "3124", "3091", "3302", "3143"]},
+    "Varus": {"profile": "onhit", "note": "韦鲁斯有多种路线；这里提供特效基线，需随实际海克斯重新选择。"},
+    "Kaisa": {"profile": "onhit", "note": "注意技能进化的属性条件；本原型不计算进化阈值。"},
+    "Ezreal": {"profile": "fighter", "items": ["3158", "3078", "3004", "3161", "6694", "3072"], "note": "伊泽瑞尔专用装备基线；优先技能命中与技能普攻衔接，通用近战海克斯不一定适用。"},
+    "Brand": {"profile": "burn"},
+    "Malzahar": {"profile": "burn"},
+    "Swain": {"profile": "burn"},
+    "Zyra": {"profile": "burn"},
+    "Teemo": {"profile": "burn"},
+    "Lillia": {"profile": "burn"},
+    "Singed": {"profile": "burn"},
+    "Lux": {"profile": "mage"},
+    "Ahri": {"profile": "mage"},
+    "Veigar": {"profile": "mage", "note": "根据已有法强考虑急速、穿透与生存的边际收益。"},
+    "Akali": {"profile": "mage", "items": ["3020", "4645", "4633", "3157", "3089", "3135"], "note": "无蓝量英雄，不需要照搬回蓝法师装备。"},
+    "Katarina": {"profile": "mage", "items": ["3020", "3115", "4645", "3157", "3089", "3135"]},
+    "Kennen": {"profile": "mage", "items": ["3020", "3152", "4645", "3157", "3089", "3135"]},
+    "Vladimir": {"profile": "mage", "items": ["3158", "3137", "3089", "3157", "3135", "4633"]},
+    "Mordekaiser": {"profile": "burn", "items": ["3047", "3116", "4633", "6653", "3065", "3075"]},
+    "Gwen": {"profile": "mage", "items": ["3111", "3115", "4633", "3089", "3157", "3135"]},
+    "Diana": {"profile": "mage", "items": ["3020", "3115", "3152", "3157", "3089", "3135"]},
+    "Ekko": {"profile": "mage", "items": ["3020", "3152", "3100", "3089", "3157", "3135"]},
+    "Fizz": {"profile": "mage", "items": ["3020", "3100", "4645", "3157", "3089", "3135"]},
+    "Malphite": {"profile": "tank", "note": "这里默认坦克；选择法术路线时可切换，但需重新评估队伍是否缺前排。"},
+    "Garen": {"profile": "fighter"},
+    "Darius": {"profile": "fighter"},
+    "Aatrox": {"profile": "fighter"},
+    "MasterYi": {"profile": "onhit", "items": ["3006", "3153", "3124", "3091", "6333", "3053"]},
+    "Zed": {"profile": "assassin"},
+    "Talon": {"profile": "assassin"},
+    "Pyke": {"profile": "assassin"},
+    "Soraka": {"profile": "support"},
+    "Sona": {"profile": "support"},
+    "Nami": {"profile": "support"},
+    "Lulu": {"profile": "support"},
+    "Janna": {"profile": "support"},
+    "Yuumi": {"profile": "support"},
+    "Milio": {"profile": "support"},
+    "Karma": {"profile": "support"},
+    "Seraphine": {"profile": "support"},
+    "Senna": {"profile": "marksman"},
+    "Nautilus": {"profile": "tank"},
+    "Leona": {"profile": "tank"},
+    "Thresh": {"profile": "tank"},
+    "Rell": {"profile": "tank"},
+    "Rakan": {"profile": "tank"}
+  }
+}
